@@ -1,0 +1,11 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "La casa de los amantes de la Pizza";
+    TimeSpan timeInBusiness = DateTime.Now - new DateTime(2018, 8, 14);
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido a Contoso Pizza</h1>
+    <p class="lead">La mejor pizza de la ciudad por @Convert.ToInt32(timeInBusiness.TotalDays) dias!</p>
+</div>
