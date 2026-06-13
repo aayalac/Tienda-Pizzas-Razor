@@ -1,10 +1,14 @@
 ﻿@page
 @model ContosoPizza.Pages.PizzaListModel
 @{
-	ViewData["Title"] = "Administración De Pizzas 🍕";
+
+    ViewData["Title"] = "Administración De Pizzas 🍕";
+    ViewData["Descripcion"] = "Aquí puedes agregar o eliminar las pizzas que ofrecerás en tu negocio. :)";
 }
 
 <h1>@ViewData["Title"]</h1>
+<p>@ViewData["Descripcion"]</p>
+
 
 <table class="table mt-5">
     <thead>
@@ -24,7 +28,7 @@
                 <td>@(pizza.IsGlutenFree ? "✔️" : string.Empty)</td>                
                 <td>
                     <form method="post" asp-page-handler="Delete" asp-route-id="@pizza.Id">
-                        <button class="btn btn-danger">Delete</button>
+                        <button class="btn btn-danger">Borrar</button>
                     </form>
                 </td>
             </tr>

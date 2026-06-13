@@ -15,4 +15,4 @@ public class Pizza
     public int Price { get; set; }
 }
 
-public enum PizzaSize { Small, Medium, Large }
+public enum PizzaSize { Small, Medium, Large, ExtraLarge }
